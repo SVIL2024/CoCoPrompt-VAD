@@ -1,0 +1,7 @@
+defaults:
+  - model_summary.yaml
+  - _self_
+  - lr_logger.yaml
+
+model_summary:
+  max_depth: -1

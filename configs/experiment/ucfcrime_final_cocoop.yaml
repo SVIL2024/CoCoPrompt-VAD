@@ -1,0 +1,38 @@
+# @package _global_
+
+# UCF-Crime Final CoCoOp Configuration
+defaults:
+  - override /data: ucfcrime.yaml
+  - override /model: cocoop_ucfcrime.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: gpu.yaml
+  - override /logger: wandb.yaml
+  - override /hydra: default.yaml
+
+seed: 1024
+exp_name: ucfcrime_final_cocoop
+
+hydra:
+  run:
+    dir: ${paths.log_dir}/${task_name}/runs/${exp_name}
+
+data:
+  batch_size: 16
+  num_workers: 6
+
+model:
+  save_dir: ${paths.log_dir}/${task_name}/runs/${exp_name}
+
+callbacks:
+  early_stopping:
+    monitor: "val/selection_score"
+    patience: 25
+    mode: "max"
+
+logger:
+  wandb:
+    name: ${exp_name}
+
+trainer:
+  enable_checkpointing: true
+  max_epochs: 50

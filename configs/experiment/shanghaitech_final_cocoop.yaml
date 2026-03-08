@@ -1,0 +1,32 @@
+# @package _global_
+
+defaults:
+  - override /data: shanghaitech.yaml
+  - override /model: cocoop_shanghaitech.yaml
+  - override /callbacks: default.yaml
+  - override /trainer: gpu.yaml
+  - override /logger: wandb.yaml
+  - override /hydra: default.yaml
+
+seed: 1024
+exp_name: shanghaitech_final_cocoop
+
+hydra:
+  run:
+    dir: ${paths.log_dir}/${task_name}/runs/${exp_name}
+
+data:
+  batch_size: 16
+  num_workers: 6
+
+model:
+  save_dir: ${paths.log_dir}/${task_name}/runs/${exp_name}
+
+trainer:
+  enable_checkpointing: true
+  max_epochs: 100
+
+logger:
+  wandb:
+    name: ${exp_name}
+    tags: ["cocoop", "shanghaitech", "final"]
