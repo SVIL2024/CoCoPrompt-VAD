@@ -44,7 +44,7 @@ Tested setup:
 Create the environment:
 
 ```bash
-git clone https://github.com/nightraider-tech/CoCoPrompt-VAD.git
+git clone https://github.com/SVIL2024/CoCoPrompt-VAD.git
 cd CoCoPrompt-VAD
 conda env create -f environment.yml
 conda activate cocoprompt
