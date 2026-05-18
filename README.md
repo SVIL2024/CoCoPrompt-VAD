@@ -10,8 +10,6 @@ CoCoPrompt-VAD is a CLIP-based weakly supervised video anomaly detection and rec
 
 ## Repository Layout
 
-This is the minimal runnable release layout.
-
 ```text
 CoCoPrompt-VAD/
 |-- assets/                  # README figures
@@ -26,20 +24,7 @@ CoCoPrompt-VAD/
 `-- README.md
 ```
 
-Runtime outputs such as `logs/`, `outputs/`, checkpoints, `ncentroid.pt`, and `eval_results/` are generated artifacts and are not part of the source layout.
-
 ## Environment
-
-The checked-in `environment.yml` is aligned with the current tested environment.
-
-Tested setup:
-
-- Python 3.13.11
-- PyTorch 2.10.0 + CUDA 12.9 build
-- TorchVision 0.25.0
-- PyTorch Lightning 2.6.0
-- Hydra Core 1.3.1
-- GPU smoke tested on NVIDIA GeForce RTX 5060 Laptop GPU
 
 Create the environment:
 
