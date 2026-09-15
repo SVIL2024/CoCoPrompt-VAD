@@ -1,6 +1,9 @@
 # CoCoPrompt-VAD
 
-Official PyTorch implementation of **CoCoPrompt-VAD: Conditional Prompting for Weakly-Supervised Video Anomaly Detection and Recognition**.
+Official PyTorch implementation of **CoCoPrompt-VAD: Conditional prompting for weakly-supervised video anomaly detection and recognition**.
+
+Published in *Knowledge-Based Systems*, Volume 352, Article 117017 (2026).
+[Paper](https://doi.org/10.1016/j.knosys.2026.117017) · [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0950705126017430)
 
 ## Overview
 
@@ -169,7 +172,9 @@ Evaluation writes metrics, curves, confusion matrices, and raw predictions under
 
 ## Results
 
-The following numbers are from the current manuscript configuration with seed 1024. Detection and recognition metrics are reported separately because CoCoPrompt-VAD primarily improves category-level evidence.
+The following results are reported in the published article using seed 1024.
+Detection and recognition metrics are reported separately because CoCoPrompt-VAD
+primarily improves category-level evidence.
 
 ### In-domain comparison
 
@@ -215,4 +220,18 @@ This project builds on ideas and code structure from:
 
 ## Citation
 
-A formal BibTeX entry will be added after publication. For now, please cite the manuscript title and this repository if you use the code or results.
+If you use this repository or the reported results, please cite:
+
+```bibtex
+@article{DU2026117017,
+  title   = {CoCoPrompt-VAD: Conditional prompting for weakly-supervised video anomaly detection and recognition},
+  journal = {Knowledge-Based Systems},
+  volume  = {352},
+  pages   = {117017},
+  year    = {2026},
+  issn    = {0950-7051},
+  doi     = {10.1016/j.knosys.2026.117017},
+  url     = {https://www.sciencedirect.com/science/article/pii/S0950705126017430},
+  author  = {ShiLong Du and ShiFeng Li and ZhenShuo Chen and YuHang Xie}
+}
+```
